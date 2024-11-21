@@ -1,0 +1,173 @@
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e0e7ff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+    color: #3b3b3b;
+}
+
+h1, h2, h3 {
+    color: #1e40af;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #e0e7ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- CONTAINER --- */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- GALLERY --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur écrans plus petits */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 colonne sur mobiles */
+    }
+}
+
+/* --- CARDS --- */
+.card {
+    max-width: 100%; /* S'adapte à la colonne */
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- CARD IMAGES --- */
+.card img {
+    width: 100%;
+    max-height: 200px; /* Limite la hauteur */
+    object-fit: cover; /* Garde les proportions */
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.card-title {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 10px 0; /* Moins d'espace autour du titre */
+    color: #333;
+}
+
+figcaption {
+    padding: 15px; /* Plus d'espace autour du texte */
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+
+/* --- BUTTONS --- */
+button {
+    background-color: #0ea5e9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0369a1;
+}
+
+/* --- FORMS --- */
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+/* --- HIGHLIGHT TEXT --- */
+.highlight {
+    color: #0ea5e9;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
